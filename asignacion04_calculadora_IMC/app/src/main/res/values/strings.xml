@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">asignacion04_calculadora_IMC</string>
+
+    <string name="texto_altura">Estatura</string>
+    <string name="texto_peso">Peso</string>
+    <string name="boton_calcular">Calcular IMC</string>
+
+    <string name="texto_hpeso">EJ: 80.2</string>
+    <string name="texto_haltura">EJ: 1.81</string>
+
+    <string name="boton_volver">Calcular IMC</string>
+    <string name="texto_IMC">Su IMC</string>
+    <string name="texto_valor_IMC">0</string>
+
+</resources>
