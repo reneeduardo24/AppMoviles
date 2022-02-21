@@ -1,129 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuActicity">
+    tools:context=".MenuActivity">
 
     <ImageView
-        android:layout_width="241dp"
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:src="@drawable/title"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="50dp"
-        />
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grupo2" />
 
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:fontFamily="sans-serif-light"
-    android:text="@string/our_menu"
-    android:textAllCaps="true"
-    android:layout_gravity="center_horizontal"
-    android:textSize="20sp"
-    android:layout_marginTop="10dp"
-    />
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/our_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:textSize="26sp"
+        android:fontFamily="sans-serif-light" />
 
-
-    <GridLayout
+    <TableLayout
         android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:columnCount="2"
-    android:layout_marginTop="20dp"
-    android:paddingHorizontal="50dp">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:stretchColumns="*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <Button
-            android:id="@+id/button_cold_drinks"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/first_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/cold_drinks"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button_hot_drinks"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/first_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/hot_drinks"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+            <Button
+                android:id="@+id/btncold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_cold"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button_sweets"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/second_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/sweets"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+            <Button
+                android:id="@+id/btnhot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_hot"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </TableRow>
 
-        <Button
-            android:id="@+id/button_salties"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/second_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/salties"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/button_combos"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/second_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/combos"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+            <Button
+                android:id="@+id/btnsweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_sweets"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
 
-        <Button
-            android:id="@+id/button_customizable"
-            android:layout_gravity="fill_horizontal"
-            android:layout_marginRight="@dimen/menu_buttons_margin"
-            android:background="@drawable/second_gradient"
-            android:paddingHorizontal="@dimen/menu_buttons_padding"
-            android:paddingVertical="@dimen/menu_buttons_padding_v"
-            android:text="@string/customizable"
-            android:textColor="@color/dusty_white"
-            android:layout_columnWeight="1"
-            android:textSize="@dimen/menu_buttons_text" />
+            <Button
+                android:id="@+id/btnsalties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_salties"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </TableRow>
 
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
+            <Button
+                android:id="@+id/btncombos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_combos"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
 
-
-    </GridLayout>
-
-
-
-
+            <Button
+                android:id="@+id/btnpersonalized"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/purple_gradient"
+                android:text="@string/btn_personalized"
+                android:textColor="#FFF"
+                android:textStyle="bold" />
+        </TableRow>
 
 
-
-
-
-
-
-
-
-
-
-</LinearLayout>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
